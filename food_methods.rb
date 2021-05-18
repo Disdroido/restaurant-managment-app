@@ -1,4 +1,5 @@
 require 'json'
+require 'terminal-table'
 
 # data_hash['books']['1'] = 'I, Robot'
 # data_hash['books']['2'] = 'The Caves of Steel'
@@ -47,7 +48,15 @@ class FoodMethods
 
     def show_menu
         self.get_all_data_hash
+        
+        rows = []
+        @data_hash.each do |hash|
+            rows << [hash["name"], hash["price"]]
+        end
+        
+        table = Terminal::Table.new :title => "MENU", :headings => ['Name','Price'], :rows => rows, 
+        :style => {:width => 80, :alignment => :center, :border_x => "=", :border_i => "x"}
 
-        puts @data_hash
+        puts table
     end
 end
