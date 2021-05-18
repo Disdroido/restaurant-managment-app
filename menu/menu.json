@@ -1,0 +1,10 @@
+{
+  "author": "Isaac Asimov",
+  "url": "https://isaacbooks.com",
+  "books": {
+    "1": "I, Robot",
+    "2": "The Caves of Steel",
+    "3": "Pebble In The Sky",
+    "4": "Harry Potter"
+  }
+}
