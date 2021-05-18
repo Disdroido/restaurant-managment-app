@@ -2,14 +2,17 @@ require 'json'
 
 # data_hash['books']['1'] = 'I, Robot'
 # data_hash['books']['2'] = 'The Caves of Steel'
-file = File.read('menu/menu2.json')
-@data_hash = JSON.parse(file)
+
 puts @data_hash
 
 class FoodMethods
-    def add_food
+    def get_all_data_hash
         file = File.read('menu/menu2.json')
         @data_hash = JSON.parse(file)
+    end
+
+    def add_food
+        self.get_all_data_hash
         getAllUserInput = false
         until getAllUserInput do
             newfood = {}
@@ -31,8 +34,7 @@ class FoodMethods
     end
 
     def delete_food
-        file = File.read('menu/menu2.json')
-        @data_hash = JSON.parse(file)
+        self.get_all_data_hash
 
         puts "These are all of the items you can delete: \n#{@data_hash}"
 
@@ -44,8 +46,7 @@ class FoodMethods
     end    
 
     def show_menu
-        file = File.read('menu/menu2.json')
-        @data_hash = JSON.parse(file)
+        self.get_all_data_hash
 
         puts @data_hash
     end
