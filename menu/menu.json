@@ -1,10 +1,14 @@
-{
-  "author": "Isaac Asimov",
-  "url": "https://isaacbooks.com",
-  "books": {
-    "1": "I, Robot",
-    "2": "The Caves of Steel",
-    "3": "Pebble In The Sky",
-    "4": "Harry Potter"
+[
+  {
+    "name": "Popcorn",
+    "description": "Popped corn curnels.",
+    "allergies": "no",
+    "price": "4"
+  },
+  {
+    "name": "Ramen",
+    "description": "Japanese noodle soup with meat and eggs.",
+    "allergies": "yes",
+    "price": "24"
   }
-}
+]
