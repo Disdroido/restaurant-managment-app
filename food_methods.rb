@@ -35,7 +35,9 @@ class FoodMethods
                 rows << [hash["name"], hash["description"], hash["allergies"], hash["price"]]
             end
 
-            table = Rainbow(Terminal::Table.new :title => "MENU", :headings => ['Name', 'Description', 'Allergies', 'Price'], :rows => rows, :style => {:width => 100, :alignment => :center, :border_x => "=", :border_i => "x"}).bright.fg(:mediumpurple)
+            table = Rainbow(Terminal::Table.new :title => "MENU", :headings => ['Name', 'Description', 'Allergies', 'Price'], 
+                :rows => rows, 
+                :style => {:width => 100, :alignment => :center, :border_x => "=", :border_i => "x"}).bright.fg(:mediumpurple)
 
             puts "\n#{table}\n\n"
             
@@ -45,7 +47,7 @@ class FoodMethods
                 get_all_user_input = true
             end
         end
-        File.write('menu/menu2.json', JSON.dump(@data_hash))
+        File.write('menu/menu.json', JSON.dump(@data_hash))
     end
 
     def delete_food        
@@ -63,8 +65,8 @@ class FoodMethods
             end
 
             table = Rainbow(Terminal::Table.new :title => "MENU", :headings => ['Name', 'Description', 'Allergies', 'Price'], 
-            :rows => rows, 
-            :style => {:width => 100, :alignment => :center, :border_x => "=", :border_i => "x"}).bright.fg(:mediumpurple)
+                :rows => rows, 
+                :style => {:width => 100, :alignment => :center, :border_x => "=", :border_i => "x"}).bright.fg(:mediumpurple)
 
             puts "\n#{table}\n\n"
 
@@ -77,7 +79,7 @@ class FoodMethods
 
                 if confirmation.downcase == "yes"
                     @data_hash.delete_if {|element| element["name"] == food_name}
-                    File.write('menu/menu2.json', JSON.dump(@data_hash))
+                    File.write('menu/menu.json', JSON.dump(@data_hash))
                 elsif confirmation.downcase[0] == "no"
                     get_all_user_input = true
                 end
@@ -91,6 +93,7 @@ class FoodMethods
         system("clear") || system("cls")
 
         self.get_all_data_hash
+        puts @data_hash
         
         rows = []
         @data_hash.each do |hash|
@@ -98,8 +101,8 @@ class FoodMethods
         end
         
         table = Rainbow(Terminal::Table.new :title => "MENU", :headings => ['Name', 'Description', 'Allergies', 'Price'], 
-        :rows => rows, 
-        :style => {:width => 100, :alignment => :center, :border_x => "=", :border_i => "x"}).bright.fg(:mediumpurple)
+            :rows => rows, 
+            :style => {:width => 100, :alignment => :center, :border_x => "=", :border_i => "x"}).bright.fg(:mediumpurple)
 
         puts "\n#{table}\n\n"
     end

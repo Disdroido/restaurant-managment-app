@@ -10,5 +10,11 @@
     "description": "Japanese noodle soup with meat and eggs.",
     "allergies": "yes",
     "price": "24"
+  },
+  {
+    "name": "Salmon Salad",
+    "description": "Seared Salmon on top of a green salad",
+    "allergies": "no",
+    "price": "30"
   }
 ]
