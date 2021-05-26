@@ -35,9 +35,9 @@ class FoodMethods
                 rows << [hash["name"], hash["description"], hash["allergies"], hash["price"]]
             end
 
-            table = Rainbow(Terminal::Table.new :title => "MENU", :headings => ['Name', 'Description', 'Allergies', 'Price'], 
+            table = Rainbow(Terminal::Table.new :title => "MENU", :headings => ['Name', 'Description', 'Allergies', 'Price ($)'], 
                 :rows => rows, 
-                :style => {:width => 100, :alignment => :center, :border_x => "=", :border_i => "x"}).bright.fg(:mediumpurple)
+                :style => {:alignment => :center, :border_x => "=", :border_i => "x"}).bright.fg(:mediumpurple)
 
             puts "\n#{table}\n\n"
             
@@ -107,3 +107,29 @@ class FoodMethods
         puts "\n#{table}\n\n"
     end
 end
+
+
+#      ||||||        |||               ||||||       |||                   |||
+#     |||  |||       |||              |||  |||       |||                 |||
+#    |||    |||      |||             |||    |||       |||               |||
+#   ||||||||||||     |||            ||||||||||||       |||    |||||    |||
+#  |||        |||    |||           |||        |||       |||  ||| |||  |||
+# |||          |||   ||||||||||   |||          |||       ||||||   ||||||
+
+
+
+#  ||||||||     |||      |||    |||      |||   |||||||||||||||
+# |||           |||      |||    |||      |||         |||
+# |||           |||      |||    |||      |||         |||
+#  ||||||||     ||||||||||||    |||      |||         |||
+#        |||    |||      |||    |||      |||         |||
+# |||||||||     |||      |||     ||||||||||          |||
+
+
+
+# |||       |||    |||||||||
+# |||       |||    |||    |||
+# |||       |||    |||    |||
+# |||       |||    |||||||||
+# |||       |||    |||
+#  |||||||||||     |||

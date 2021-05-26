@@ -19,5 +19,44 @@ This application is to help restaurants manage their menu and food items that ar
 
    This feature allows the restaurant owner to delete a food item off of the menu by inputting the name of the item. This allows for exact and precise deleting of a specific item on the menu. First the menu is printed out to show the user all of the items they can delete off of the menu. It then asks for confirmation of the user and if the user inputs either yes or no it will either go forward with deleting the item or it will start over again and show the menu of the items that can be removed. The user can also type "exit" which will exit to the main menu.
 
-   
+
+## **Develop** an **outline** of the user interaction and experience for the application
+
+The user will find out how  to use the application by reading the names of the menu list once you open the application. The application displays a little welcome message and a brief description of what to do. Each feature is very simple to use and has the name of what is going to happen as the list item name.
+
+The user interacts/uses the application by selecting the activity that they would like to complete. Next they will do the simple instructions to complete the activity. Then they can save what they have done to the JSON file.
+
+Errors are handled by watching and waiting for the user to input a word and if the word is incorrect or is not one to the priority words it will display a simple error message to the user in a bright colour to get their attention.
+
+## **Develop** a diagram which describes the control flow of your application
+
+![Flow chart](C:\Users\Ethan\Documents\ruby\EthanWorth_T1A3\restaurant-management-app\progress_img\Blank diagram.png)
+
+## **Develop** an implementation plan
+
+View "progress_img" folder and either "1" or "2" to view progress images.
+
+https://trello.com/invite/b/m1zNHR17/0fa21f2223e28a2faf70e2bfadd36b02/terminal-app
+
+## Installation
+
+### Installation of the application:
+
+Go to the "Code" dropdown button in Github and click "Download Zip", to download all the code.
+
+OR
+
+Go to the "Code" dropdown button in Github and click "Clone Repository", to clone the repository of the application.
+
+### Installation for JSON:
+
+"gem install json"
+
+### Installation for Terminal Table:
+
+"gem install terminal-table"
+
+### Installation for Rainbow:
+
+"gem install rainbow"
 
