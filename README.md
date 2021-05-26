@@ -60,3 +60,20 @@ Go to the "Code" dropdown button in Github and click "Clone Repository", to clon
 
 "gem install rainbow"
 
+## Reference Sources
+
+### Github:
+
+https://github.com/Disdroido/restaurant-managment-app
+
+### JSON:
+
+https://rubygems.org/gems/json/versions/1.8.3
+
+### Terminal Table:
+
+https://rubygems.org/gems/terminal-table
+
+### Rainbow:
+
+https://rubygems.org/gems/rainbow
