@@ -2,9 +2,6 @@ require 'json'
 require 'terminal-table'
 require 'rainbow'
 
-# data_hash['books']['1'] = 'I, Robot'
-# data_hash['books']['2'] = 'The Caves of Steel'
-
 class FoodMethods
     def get_all_data_hash
         file = File.read('menu/menu.json')
@@ -94,7 +91,6 @@ class FoodMethods
 
         self.get_all_data_hash
         puts @data_hash
-        
         rows = []
         @data_hash.each do |hash|
             rows << [hash["name"], hash["description"], hash["allergies"], hash["price"]]
